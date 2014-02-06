@@ -12,17 +12,43 @@ Usage
 gem install factorial-cached
 ```
 
+### Options
+
+You can pass some parameters to factorial method to your needs. Above are the options and their default values.
+
+```ruby
+
+ # Caching
+
+:cache_none # Doesn't caches any calculated factorial.
+:cache_all # Caches all the possible invocation/iteration results. This option is not recommended if you will work with high numbers.
+:cache # Caches only the given numbers results. (DEFAULT)
+
+ # Algorithm
+
+:iterative # Iterative implementation of the Factorial Algorithm. Good if you will calculate high numbers. (Default after and at 100.000)
+:recursive # Recursive implementation of the Factorial Algorithm. Good if you want speed on low numbers. (Default below 100.000)
+
+ # Closest
+
+:value # Returns value of the closest factorial.
+:factorial # Returns closest cached factorial.
+
+```
+
 ### Code
 
 ```ruby
 require 'factorial-cached'
 
-5.factorial # => 120, Caches 5 factorial
-8.factorial(:cache_all) # => 5! * 6 * 7 * 8, Caches 6..8 factorial
-7.factorial # => 8! / 8
+5.factorial # => 120 - Caches 5 factorial only.
+8.factorial(:cache_all) #=> 40320 - Caches through 6..8 factorial.
+7.factorial #=> 5040 - Returns by Dividing cached 8! / 8
 
-Factorial::extract(17, 16) # => 16 * 16!, Caches both 16 and 17 for further usage.
-Factorial::closest(18) # => 17, Gets closest cached factorial to the given numumber.
+Factorial::factorial(5, :iterative, :cache_all) #=> Same deal as the Integer#factorial
+
+Factorial::closest(5) #=> 5 - Returns closest cached factorial by the given number.
+Factorial::closest(5, :value) #=> 120 - Returns closest cached factorial's value by the given number.
 
 ```
 
