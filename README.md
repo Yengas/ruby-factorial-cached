@@ -22,12 +22,13 @@ You can pass some parameters to factorial method to your needs. Above are the op
 
 :cache_none # Doesn't caches any calculated factorial.
 :cache_all # Caches all the possible invocation/iteration results. This option is not recommended if you will work with high numbers.
-:cache # Caches only the given numbers results. (DEFAULT)
+:cache_one # Caches only the given numbers results. (DEFAULT)
 
  # Algorithm
 
-:iterative # Iterative implementation of the Factorial Algorithm. Good if you will calculate high numbers. (Default after and at 100.000)
-:recursive # Recursive implementation of the Factorial Algorithm. Good if you want speed on low numbers. (Default below 100.000)
+:iterative # Iterative implementation of the Factorial Algorithm. Good if you will calculate high numbers.
+:recursive # Recursive implementation of the Factorial Algorithm. Good if you want speed on low numbers.
+:auto # Iterative if number > 100.000, Recursive if below or equal. (DEFAULT)
 
  # Closest
 
@@ -56,6 +57,8 @@ Factorial::empty_cache(5..8) # Emtpies cache through 5..8 factorial.
 Factorial::get_cache() # => { 0 => 1} in this case.
 
 Factorial::toggle(:cache, :cache_none) # Toggles default of caching to none, further factorial calculations will not be cached by default.
+Factorial::toggle(:algorithm, :iterative) # Togglest default algorithm to iterative algorithm.
+Factorial::toggle(:closest, :value) # Closest now returns value of the factorial default.
 
 5.factorial => Returns 5, caches nothing.
 5.factorial(:cache_one) => Calculates 5!, caches 5! only. (This is the default behaviour of this gem)

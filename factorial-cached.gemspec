@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
 	gem.authors = [ 'Yiğitcan UÇUM' ];
 	gem.email = 'yigitcan@hotmail.com.tr';
 
-	gem.files = [ 'lib/Factorial.rb', 'lib/Integer.rb' ];
+	gem.files = Dir[ 'LICENSE', 'README.md', 'lib/**/*'];
 
 	gem.homepage = 'http://rubygems.org/gems/factorial-cached';
 	gem.license = 'MIT';

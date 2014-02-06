@@ -74,8 +74,10 @@ class Factorial
 			return 1 if (number = number.to_i) <= 0 || !number.is_a?(Integer);			
 				
 			factorial = method(options.include?(:iterative) ? :iterative_factorial : 
-								options.include?(:recursive) ? :recursive_factorial : 
-										@@default[:algorithm] == :recursive ? :recursive_factorial : :iterative_factorial);
+								options.include?(:recursive) ? :recursive_factorial :
+									options.include?(:auto) ? (number > 100000 ? :iterative_factorial : :recursive_factorial) : 
+										@@default[:algorithm] == :recursive ? :recursive_factorial : 
+												@@default[:algorithm] == :auto ? (number > 100000 ? :iterative_factorial : recursive_factorial) : :iterative_factorial);
 			cache = options.include?(:cache_none) ? :cache_none : options.include?(:cache_all) ? :cache_all : options.include?(:cache_one) ? :cache_one : @@default[:cache];	
 			
 			result = factorial.call(number, cache);
