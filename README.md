@@ -12,7 +12,7 @@ Usage
 gem install factorial-cached
 ```
 
-or after pulling / downloading zip of this Github project,
+or after pulling / downloading this Github project,
 
 ```
 cd path/to/project
