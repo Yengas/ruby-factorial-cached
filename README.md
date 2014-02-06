@@ -12,6 +12,14 @@ Usage
 gem install factorial-cached
 ```
 
+or after pulling / downloading zip of this Github project,
+
+```
+cd path/to/project
+gem build factorial-cached.gemspec
+gem install factorial-cached-0-0-1.gem
+```
+
 ### Options
 
 You can pass some parameters to factorial method to your needs. Above are the options and their default values.
@@ -60,9 +68,9 @@ Factorial::toggle(:cache, :cache_none) # Toggles default of caching to none, fur
 Factorial::toggle(:algorithm, :iterative) # Togglest default algorithm to iterative algorithm.
 Factorial::toggle(:closest, :value) # Closest now returns value of the factorial default.
 
-5.factorial => Returns 5, caches nothing.
-5.factorial(:cache_one) => Calculates 5!, caches 5! only. (This is the default behaviour of this gem)
-5.factorial => Returns 5! from cache.
+5.factorial #=> Returns 5, caches nothing.
+5.factorial(:cache_one) #=> Calculates and returns 5!, caches 5! only. (This is the default behaviour of this gem)
+5.factorial #=> Returns 5! from cache.
 
 ```
 
