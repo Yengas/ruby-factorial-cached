@@ -14,7 +14,7 @@ Usage
 gem install factorial-cached
 ```
 
-or after pulling / downloading this Github project,
+or after cloning / downloading this Github project,
 
 ```
 cd path/to/project
