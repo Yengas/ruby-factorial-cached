@@ -50,6 +50,17 @@ Factorial::factorial(5, :iterative, :cache_all) #=> Same deal as the Integer#fac
 Factorial::closest(5) #=> 5 - Returns closest cached factorial by the given number.
 Factorial::closest(5, :value) #=> 120 - Returns closest cached factorial's value by the given number.
 
+Factorial::empty_cache() # Empties cache if you don't want to have memory issues.
+Factorial::empty_cache(5..8) # Emtpies cache through 5..8 factorial.
+
+Factorial::get_cache() # => { 0 => 1} in this case.
+
+Factorial::toggle(:cache, :cache_none) # Toggles default of caching to none, further factorial calculations will not be cached by default.
+
+5.factorial => Returns 5, caches nothing.
+5.factorial(:cache_one) => Calculates 5!, caches 5! only. (This is the default behaviour of this gem)
+5.factorial => Returns 5! from cache.
+
 ```
 
 License
