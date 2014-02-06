@@ -3,6 +3,8 @@ ruby-factorial-cached
 
 factorial-cached is a gem which aims to fasten your consecutively made factorial operations with caching. This gem was half-way done because of a little Project Euler adventure of mine. Please make any pull requests that you think will fasten the operations and i will check it out and update the gem on rubygems asap.
 
+Gem also hosted at: [Ruby Gems](https://rubygems.org/gems/factorial-cached)
+
 Usage
 =====
 
@@ -17,7 +19,7 @@ or after pulling / downloading this Github project,
 ```
 cd path/to/project
 gem build factorial-cached.gemspec
-gem install factorial-cached-0-0-1.gem
+gem install factorial-cached-0.0.1.gem
 ```
 
 ### Options
