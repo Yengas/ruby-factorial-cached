@@ -1,7 +1,7 @@
 Gem::Specification.new do |gem|
 
 	gem.name = 'factorial-cached';
-	gem.version = '0.0.1';
+	gem.version = '0.0.2';
 	gem.date = '2014-02-06';
 
 	gem.summary = 'A gem for making your factorial operations faster.';
