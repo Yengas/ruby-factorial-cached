@@ -1,7 +1,7 @@
 ruby-factorial-cached
 =====================
 
-ruby-factorial-cached is a gem which aims to fasten your consecutively made factorial operations with caching. This gem was half-way done because of a little Project Euler adventure of mine. Please make any pull requests that you think will fasten the operations and i will check it out and update the gem on rubygems asap.
+factorial-cached is a gem which aims to fasten your consecutively made factorial operations with caching. This gem was half-way done because of a little Project Euler adventure of mine. Please make any pull requests that you think will fasten the operations and i will check it out and update the gem on rubygems asap.
 
 Usage
 =====
